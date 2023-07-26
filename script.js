@@ -2,7 +2,7 @@
 const screen1 = document.querySelector(".screen1")
 const screen2 = document.querySelector(".screen2")
 const hide = "hide"
-const random = Math.round(Math.random() * 10)
+let random = Math.round(Math.random() * 10)
 const btnTry = document.querySelector("#btnTry")
 const btnReset = document.querySelector("#btnReset")
 const inputNumber = document.querySelector("#inputNumber")
@@ -11,6 +11,12 @@ let xAttempts = 1;
 // Events
 btnTry.addEventListener('click', handleTryClick)
 btnReset.addEventListener('click', handleResetClick)
+document.addEventListener('keypress', (e) => {
+  if(e.key == 'Enter'){
+
+    handleResetClick()
+  }
+})
 
 // callback Function
 function handleTryClick(event){
