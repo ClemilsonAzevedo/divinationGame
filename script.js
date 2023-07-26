@@ -20,7 +20,7 @@ function handleTryClick(event){
 
 // Callback Function
   if(Number(inputNumber.value) == random){
-    screen1.querySelector("p").innerText = `Divine a number 0 - 10`
+    screen1.querySelector("p").innerText = `Divine a number 0 - 10 `
     
     toggleScreen()
   
